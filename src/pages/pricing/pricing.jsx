@@ -264,31 +264,31 @@ function Pricing() {
 						</span>
 					</div>
 					<div className=' lg:max-w-[819.69px] min-h-[100px] mx-auto  border-[0.80px] border-[#75CB31]'>
-						<div className='border-b-[0.80px] items-center lg:space-y-0 space-y-[10px] justify-between lg:flex-row flex flex-col pl-[15px] lg:py-0 py-[20px] lg:px-[40.86px]  min-h-[84.851px] w-full border-[#75CB31]'>
-							<div className=' justify-center  w-full lg:w-[391px]  text-[#004AAD] text-[31.64px] font-normal MadeGentle leading-[34.42px]'>
+						<div className='border-b-[0.80px] items-start lg:items-center lg:space-y-0 space-y-[10px] justify-between lg:flex-row flex flex-col pl-[15px] lg:py-0 py-[20px] lg:px-[40.86px]  min-h-[84.851px] w-full border-[#75CB31]'>
+							<div className=' justify-center  w-full lg:w-[391px]  text-[#004AAD] text-[24px] lg:text-[31.64px] font-normal MadeGentle leading-[34.42px]'>
 								Base Rate:{' '}
 							</div>
-							<div className='justify-center text-[#75CB31] text-[31.64px] font-normal MadeGentle leading-[34.42px]'>
+							<div className='justify-center text-[#75CB31] text-[24px] lg:text-[31.64px] font-normal MadeGentle leading-[23px] lg:leading-[34.42px]'>
 								$275.00 / Per Week
 							</div>
 						</div>
-						<div className='border-b-[0.80px] items-center lg:space-y-0 space-y-[10px] justify-between lg:flex-row flex flex-col pl-[15px] lg:py-0 py-[20px] lg:px-[40.86px]  min-h-[84.851px] w-full border-[#75CB31]'>
-							<div className=' justify-center  w-full lg:w-[391px]  text-[#004aad] text-[31.64px] font-normal MadeGentle leading-[34.42px]'>
+						<div className='border-b-[0.80px] items-start lg:items-center lg:space-y-0 space-y-[10px] justify-between lg:flex-row flex flex-col pl-[15px] lg:py-0 py-[20px] lg:px-[40.86px]  min-h-[84.851px] w-full border-[#75CB31]'>
+							<div className=' justify-center  w-full lg:w-[391px]  text-[#004aad] text-[24px] lg:text-[31.64px] font-normal MadeGentle leading-[34.42px]'>
 								One Time Deposit:
 							</div>
-							<div className='justify-center text-[#75CB31] text-[31.64px] font-normal MadeGentle leading-[34.42px]'>
+							<div className='justify-center text-[#75CB31] text-[24px] lg:text-[31.64px] font-normal MadeGentle leading-[23px] lg:leading-[34.42px]'>
 								$75/ Per Camper
 							</div>
 						</div>
-						<div className='border-b-[0.80px] items-center lg:space-y-0 space-y-[10px] justify-between lg:flex-row flex flex-col pl-[15px] lg:py-0 py-[20px] lg:px-[40.86px]  min-h-[84.851px] w-full border-[#75CB31]'>
-							<div className=' justify-center   text-[#004aad] text-[31.64px] font-normal MadeGentle leading-[34.42px]'>
+						<div className='border-b-[0.80px] items-start lg:items-center lg:space-y-0 space-y-[10px] justify-between lg:flex-row flex flex-col pl-[15px] lg:py-0 py-[20px] lg:px-[40.86px]  min-h-[84.851px] w-full border-[#75CB31]'>
+							<div className=' justify-center   text-[#004aad] text-[24px] lg:text-[31.64px] font-normal MadeGentle leading-[28px] lg:leading-[34.42px]'>
 								Pay Schedule:
 							</div>
-							<div className='justify-center text-[#75CB31] text-[31.64px] font-normal MadeGentle leading-[34.42px]'>
+							<div className='justify-center text-[#75CB31] text-[24px] lg:text-[31.64px] font-normal MadeGentle leading-[23px] lg:leading-[34.42px]'>
 								Full Balance Due May 1, 2026{' '}
 							</div>
 						</div>
-						<div className='border-b-[0.80px] items-center flex px-[40.86px] py-[20px]  min-h-[84.851px] w-full border-[#75CB31]'>
+						<div className='border-b-[0.80px] items-center flex px-[20px] lg:px-[40.86px] py-[20px]  min-h-[84.851px] w-full border-[#75CB31]'>
 							<div className=" justify-center text-[#004aad] text-[17px] font-medium font-['Montserrat'] leading-[30.42px]">
 								To secure your spot, a $75 deposit per week per child is due at
 								registration. If you opt for After Camp, the fee for that
@@ -300,13 +300,13 @@ function Pricing() {
 								<br />
 							</div>
 						</div>
-						<div className='border-b-[0.80px] items-center lg:space-y-0 space-y-[10px] lg:flex-row flex flex-col pl-[15px] lg:py-0 py-[20px] lg:pl-[40.86px]  min-h-[84.851px] w-full border-[#75CB31]'>
-							<div className=' justify-center  text-[#004aad] text-[31.64px] font-normal MadeGentle leading-[34.42px]'>
+						<div className='border-b-[0.80px] items-center lg:space-y-0 space-y-[10px] lg:flex-row flex flex-col  lg:pr-0 px-[15px] pl-[15px] lg:py-0 py-[20px] lg:pl-[40.86px]  min-h-[84.851px] w-full border-[#75CB31]'>
+							<div className=' justify-center  text-[#004aad] text-[24px] lg:text-[31.64px] font-normal MadeGentle leading-[34.42px]'>
 								Other Add-Ons & Discounts
 							</div>
 						</div>
-						<div className='border-b-[0.80px]  flex  items-center    min-h-[84.851px] w-full border-[#75CB31]'>
-							<div className=' lg:flex-1  '>
+						<div className='border-b-[0.80px]  flex  items-center lg:p-0 p-[15px]   min-h-[84.851px] w-full border-[#75CB31]'>
+							<div className=' lg:flex-1 lg:block hidden  '>
 								<div className=' h-[250px] lg:h-[212.93px] lg:pt-[40px] flex items-center justify-center'>
 									{One}
 								</div>
@@ -321,8 +321,8 @@ function Pricing() {
 								</div>
 							</div>
 							<div className='w-full lg:w-[553.93px] h-full pb-[18px] lg:border-l-[0.80px] border-[#75CB31]'>
-								<div className=' h-[250px] lg:h-[212.93px]  space-y-[10px] relative flex flex-col justify-center  lg:pl-[34.42px] w-full'>
-									<div className='absolute right-[-55.23px] bottom-0'>
+								<div className=' h-[250px]  lg:h-[212.93px] lg:text-start text-center  space-y-[10px] relative flex flex-col justify-center  lg:pl-[34.42px] w-full'>
+									<div className='absolute lg:block hidden right-[-55.23px] bottom-0'>
 										<svg
 											width='902'
 											height='204'
@@ -336,7 +336,9 @@ function Pricing() {
 											/>
 										</svg>
 									</div>
-
+									<div className='lg:hidden h-[140px] flex justify-center'>
+										{One}
+									</div>
 									<p className=" text-[#004aad]  text-[14px] lg:text-[20px] font-bold font-['League_Spartan'] leading-[22px] lg:leading-[34.42px] justify-center">
 										<span className='uppercase'>
 											Register Early-by January 15
@@ -354,8 +356,8 @@ function Pricing() {
 										</button>
 									</Link>
 								</div>
-								<div className='h-[250px] lg:h-[212.93px]  relative flex flex-col justify-center  lg:pl-[34.42px] w-full'>
-									<div className='absolute right-[-77.23px] bottom-1/2 lg:translate-y-0 translate-y-1/2 lg:bottom-0'>
+								<div className='h-[250px] pt-[100px] lg:pt-0 lg:h-[212.93px]  lg:text-start text-center relative flex flex-col justify-center  lg:pl-[34.42px] w-full'>
+									<div className='absolute lg:block hidden right-[-77.23px] bottom-1/2 lg:translate-y-0 translate-y-1/2 lg:bottom-0'>
 										<svg
 											width='955'
 											height='199'
@@ -369,8 +371,10 @@ function Pricing() {
 											/>
 										</svg>
 									</div>
-
-									<p className=' text-[#004aad] text-[14px] lg:text-xl font-bold font-["League_Spartan"] leading-[22px] lg:leading-[34.42px] justify-center'>
+									<div className='lg:hidden  h-[140px] flex justify-center'>
+										{Two}
+									</div>
+									<p className=' text-[#004aad]  text-[14px] lg:text-xl font-bold font-["League_Spartan"] leading-[22px] lg:leading-[34.42px] justify-center'>
 										ADD BONUS HOURS: <br />
 										<span className="text-[#004aad] text-[14px] lg:text-xl font-normal font-['League_Spartan'] leading-[26px] lg:leading-[34.42px]">
 											Extended After Camp (2:30–6:00){' '}
@@ -389,8 +393,8 @@ function Pricing() {
 										</span>
 									</p>
 								</div>
-								<div className='h-[250px] lg:h-[239.34px] pt-[15px]   relative flex flex-col justify-center  lg:pl-[34.42px] w-full'>
-									<div className='absolute right-[-77.23px] bottom-0'>
+								<div className='h-[250px] lg:h-[239.34px] pt-[140px] lg:pt-[15px]  lg:text-start text-center   relative flex flex-col justify-center  lg:pl-[34.42px] w-full'>
+									<div className='absolute lg:block hidden right-[-77.23px] bottom-0'>
 										<svg
 											width='955'
 											height='215'
@@ -404,7 +408,9 @@ function Pricing() {
 											/>
 										</svg>
 									</div>
-
+									<div className='lg:hidden h-[140px] flex justify-center'>
+										{Three}
+									</div>
 									<p className=' justify-center'>
 										<span class="text-[#004aad] text-[14px] lg:text-[20px] font-bold font-['League_Spartan'] leading-[22px] lg:leading-[34.42px]">
 											SIBLING DISCOUNT:{' '}
@@ -430,8 +436,8 @@ function Pricing() {
 										</span>
 									</p>
 								</div>
-								<div className='h-[250px] lg:h-[212.13px]  pt-[25px]  relative flex flex-col justify-center  lg:pl-[34.42px] w-full'>
-									<div className='absolute right-[-52.23px] bottom-0'>
+								<div className='h-[250px] lg:h-[212.13px] mb-[180px]  lg:mb-0 pt-[180px] lg:pt-[25px] lg:text-start text-center  relative flex flex-col justify-center  lg:pl-[34.42px] w-full'>
+									<div className='absolute lg:block hidden right-[-52.23px] bottom-0'>
 										<svg
 											width='902'
 											height='197'
@@ -445,7 +451,9 @@ function Pricing() {
 											/>
 										</svg>
 									</div>
-
+									<div className='lg:hidden h-[140px] flex justify-center'>
+										{Four}
+									</div>
 									<p className=' justify-center'>
 										<span class="text-[#004aad] text-[14px] lg:text-[20px] font-bold font-['League_Spartan'] leading-[34.42px]">
 											MULTI-WEEK DISCOUNT: <br />

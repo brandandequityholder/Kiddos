@@ -55,13 +55,9 @@ function Values() {
 					</div>
 				</div>
 				<div className='h-[410px] relative lg:hidden overflow-hidden'>
-					<video
-						playsInline
-						src={TopVid}
-						loop
-						autoPlay
-						muted
-						className=' w-full h-full  object-cover '
+					<img
+						src={bg}
+						className='h-[596.36px] w-[892.51px] object-cover'
 					/>
 					<img
 						src={VidCurveMob}
