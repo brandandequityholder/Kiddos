@@ -393,7 +393,7 @@ function Pricing() {
 										</span>
 									</p>
 								</div>
-								<div className='h-[250px] lg:h-[239.34px] pt-[140px] lg:pt-[15px]  lg:text-start text-center   relative flex flex-col justify-center  lg:pl-[34.42px] w-full'>
+								<div className='h-[250px] lg:h-[239.34px] pt-[160px] lg:pt-[15px]  lg:text-start text-center   relative flex flex-col justify-center  lg:pl-[34.42px] w-full'>
 									<div className='absolute lg:block hidden right-[-77.23px] bottom-0'>
 										<svg
 											width='955'
@@ -436,7 +436,7 @@ function Pricing() {
 										</span>
 									</p>
 								</div>
-								<div className='h-[250px] lg:h-[212.13px] mb-[180px]  lg:mb-0 pt-[180px] lg:pt-[25px] lg:text-start text-center  relative flex flex-col justify-center  lg:pl-[34.42px] w-full'>
+								<div className='h-[250px] lg:h-[212.13px] mb-[180px]  lg:mb-0 pt-[220px] lg:pt-[25px] lg:text-start text-center  relative flex flex-col justify-center  lg:pl-[34.42px] w-full'>
 									<div className='absolute lg:block hidden right-[-52.23px] bottom-0'>
 										<svg
 											width='902'
