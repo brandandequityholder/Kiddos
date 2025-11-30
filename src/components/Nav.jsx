@@ -144,11 +144,24 @@ function Nav() {
 						<div className='lg:block hidden'>
 							<div className='absolute right-0 top-full hidden group-hover:flex flex-col bg-[#043679] w-[90%] shadow-lg rounded-b-lg'>
 								{[
-									{ img: Logo, label: 'KIDDOS SUMMER CAMP' },
-									{ img: ELC, label: 'KIDDOS EARLY LEARNING CENTER' },
-									{ img: KAS, label: 'KIDDOS AFTER SCHOOL' },
+									{
+										img: Logo,
+										label: 'KIDDOS SUMMER CAMP',
+										link: 'https://Kiddossummercamp.com',
+									},
+									{
+										img: ELC,
+										label: 'KIDDOS EARLY LEARNING CENTER',
+										link: 'https://Kiddoselc.com',
+									},
+									{
+										img: KAS,
+										label: 'KIDDOS AFTER SCHOOL',
+										link: 'https://kiddosatlanta.com/after-school-programs',
+									},
 								].map((item, i) => (
 									<Link
+										to={item.link}
 										key={i}
 										className='px-5 border-t-[0.5px] border-opacity-20 border-white h-[86px] py-3 flex items-center justify-between text-white hover:bg-[#F8EA2B] hover:text-[#004AAD] text-xs tracking-wider transition-colors'>
 										<div className='flex items-center space-x-[15px]'>
