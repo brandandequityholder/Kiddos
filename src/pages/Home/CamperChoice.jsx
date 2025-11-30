@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import bg from './Assets/bgCamper.svg';
 import CamperCurveOne from './Curves/CampCurveOne.svg';
 import CamperCurveTwo from './Curves/CampCurveTwo.svg';
@@ -44,9 +45,11 @@ function CamperChoice() {
 							within a safe, supportive, and wildly creative environment.
 						</div>
 					</div>
-					<button className='w-[189.598px] lg:w-[261.29px] flex items-center text-center justify-center h-[44px] lg:h-[60.21px] text-[#004aad] text-[14.411px]  lg:text-xl font-[700] font-["Montserrat"] leading-[69.29px] tracking-[3.90px] bg-[#F8EA2B] rounded-[4.354px] lg:rounded-[6px]'>
+					<Link
+						to={'shedule'}
+						className='w-[189.598px] lg:w-[261.29px] flex items-center text-center justify-center h-[44px] lg:h-[60.21px] text-[#004aad] text-[14.411px]  lg:text-xl font-[700] font-["Montserrat"] leading-[69.29px] tracking-[3.90px] bg-[#F8EA2B] rounded-[4.354px] lg:rounded-[6px]'>
 						LEARN MORE
-					</button>
+					</Link>
 				</div>
 			</div>
 			<img

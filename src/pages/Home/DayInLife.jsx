@@ -1,7 +1,7 @@
 import KidVid from '../../assets/KidVid.mp4';
 import CurveThree from '../Home/Curves/CurveThree.svg';
 import CurveTwo from '../Home/Curves/CurveTwo.svg';
-
+import { Link } from 'react-router-dom';
 function DayInLife() {
 	return (
 		<section className='relative z-[5] pb-[30px] lg:pb-[200px]  '>
@@ -120,9 +120,11 @@ function DayInLife() {
 						</div>
 					</div>
 				</div>
-				<button className='w-[189.598px] lg:w-[261.29px] flex justify-center items-center text-white text-[14.149px] lg:text-xl font-[600] font-["Montserrat"] leading-[69.29px] tracking-[3.90px] h-[43.688px] lg:h-[60.207px] bg-[#004aad] rounded-[4.36px] lg:rounded-[6px]'>
+				<Link
+					to='schedule'
+					className='w-[189.598px] lg:w-[261.29px] flex justify-center items-center text-white text-[14.149px] lg:text-xl font-[600] font-["Montserrat"] leading-[69.29px] tracking-[3.90px] h-[43.688px] lg:h-[60.207px] bg-[#004aad] rounded-[4.36px] lg:rounded-[6px]'>
 					LEARN MORE
-				</button>
+				</Link>
 			</div>
 			<img
 				src={CurveThree}

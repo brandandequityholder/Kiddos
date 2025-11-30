@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import BigLogo from '../Home/BigLogo.svg';
 import curveOne from './Curves/CurveOne.svg';
 function Sec() {
@@ -57,9 +58,11 @@ function Sec() {
 								campers tailor their day, their way!
 								<br />
 							</div>
-							<button className='w-[189.598px] lg:w-[261.29px] flex justify-center items-center text-[#fff] text-[14.149px] lg:text-xl font-[600] font-["Montserrat"] leading-[69.29px] tracking-[3.90px] h-[43.688px] lg:h-[60.207px] bg-[#004AAD] rounded-[4.36px] lg:rounded-[6px]'>
+							<Link
+								to={'schedule'}
+								className='w-[189.598px] lg:w-[261.29px] flex justify-center items-center text-[#fff] text-[14.149px] lg:text-xl font-[600] font-["Montserrat"] leading-[69.29px] tracking-[3.90px] h-[43.688px] lg:h-[60.207px] bg-[#004AAD] rounded-[4.36px] lg:rounded-[6px]'>
 								LEARN MORE
-							</button>
+							</Link>
 						</div>
 					</div>
 					<div className='flex lg:flex-row lg:space-y-0 space-y-[30px] flex-col justify-between w-full'>

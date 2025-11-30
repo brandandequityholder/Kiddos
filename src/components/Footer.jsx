@@ -96,18 +96,36 @@ function Footer() {
 						</div>
 					</div>
 					<div className='w-screen flex lg:flex-row flex-col lg:h-[36.98px] text-white text-xs font-normal MadeGentle uppercase leading-6 tracking-[2.76px]'>
-						<div className='lg:flex-1  h-[53.707px] lg:text-base text-[12.42px] lg:h-full flex items-center justify-center bg-[#C9368A]'>
+						<Link
+							to='https://Kiddosatlanta.com'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='lg:flex-1 h-[53.707px] lg:text-base text-[12.42px]
+							lg:h-full flex items-center justify-center bg-[#C9368A]'>
+							{' '}
 							KIDDOS ATLANTA
-						</div>
-						<div className='lg:flex-1 h-[53.707px] lg:text-base text-[12.42px] lg:h-full flex items-center justify-center bg-[#00B6BE]'>
+						</Link>
+						<Link
+							to='https://Kiddoselc.com'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='lg:flex-1 h-[53.707px] lg:text-base text-[12.42px] lg:h-full flex items-center justify-center bg-[#00B6BE]'>
 							KIDDOS EARLY LEARNING CENTER
-						</div>
-						<div className='lg:flex-1 h-[53.707px] lg:text-base text-[12.42px] lg:h-full flex items-center justify-center bg-[#F58235]'>
+						</Link>
+						<Link
+							to='https://kiddosatlanta.com/after-school-programs'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='lg:flex-1 h-[53.707px] lg:text-base text-[12.42px] lg:h-full flex items-center justify-center bg-[#F58235]'>
 							KIDDOS AFTERSCHOOL
-						</div>
-						<div className='lg:flex-1 h-[53.707px] lg:text-base text-[12.42px] lg:h-full flex items-center justify-center bg-[#8BC53F]'>
+						</Link>
+						<Link
+							to='https://Kiddossummercamp.com'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='lg:flex-1 h-[53.707px] lg:text-base text-[12.42px] lg:h-full flex items-center justify-center bg-[#8BC53F]'>
 							KIDDOS DAY CAMP
-						</div>
+						</Link>
 					</div>
 
 					<div className='lg:h-[70px] py-[33px] space-y-[20px] lg:py-0  lg:px-[80px] flex lg:flex-row flex-col justify-end w-full bg-[#004AAD]'>
