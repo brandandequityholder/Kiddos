@@ -169,12 +169,8 @@ function Pricing() {
 					</div>
 				</div>
 				<div className='h-[410px] relative lg:hidden overflow-hidden'>
-					<video
-						playsInline
-						src={TopVid}
-						loop
-						autoPlay
-						muted
+					<img
+						src={bg}
 						className=' w-full h-full  object-cover '
 					/>
 					<img
