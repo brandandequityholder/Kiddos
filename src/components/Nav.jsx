@@ -465,6 +465,7 @@ function Nav() {
 											SUMMER CAMP
 										</>
 									),
+									link: 'https://Kiddossummercamp.com',
 								},
 								{
 									img: ELC,
@@ -475,6 +476,7 @@ function Nav() {
 											CENTER
 										</>
 									),
+									link: 'https://Kiddoselc.com',
 								},
 								{
 									img: KAS,
@@ -484,10 +486,12 @@ function Nav() {
 											AFTER SCHOOL
 										</>
 									),
+									link: 'https://kiddosatlanta.com/after-school-programs',
 								},
 							].map((item, i) => (
 								<Link
 									key={i}
+									to={item.link}
 									className='p-[50px] border-b-[0.5px] w-full border-opacity-20 border-white  flex items-center justify-between text-white hover:bg-[#F8EA2B] hover:text-[#004AAD] text-xs tracking-wider transition-colors'>
 									<div className='flex items-center space-x-[34px]'>
 										<img

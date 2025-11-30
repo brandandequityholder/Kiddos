@@ -118,11 +118,28 @@ function Footer() {
 
 							{/* Socials */}
 							<div className='flex  flex-row-reverse mr-[20px] lg:mr-0 space-x-[20px] lg:space-x-[26px]'>
-								<button className='ml-[26px] lg:w-fit w-[14.787px]'>
+								<button
+									onClick={() => {
+										window.open(
+											'https://www.instagram.com/kiddos_camp?igsh=MWI3cnczZHJ1OW4zZA==',
+											'_blank',
+											'noopener,noreferrer'
+										);
+									}}
+									className='ml-[26px] lg:w-fit w-[14.787px]'>
 									{instagram}
 								</button>
 
-								<button>{facebook}</button>
+								<button
+									onClick={() => {
+										window.open(
+											'https://www.facebook.com/kiddosatlanta/',
+											'_blank',
+											'noopener,noreferrer'
+										);
+									}}>
+									{facebook}
+								</button>
 							</div>
 						</div>
 						<div className='lg:hidden w-full flex items-end justify-center '>
