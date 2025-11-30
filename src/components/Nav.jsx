@@ -163,6 +163,8 @@ function Nav() {
 									<Link
 										to={item.link}
 										key={i}
+										target='_blank'
+										rel='noopener noreferrer'
 										className='px-5 border-t-[0.5px] border-opacity-20 border-white h-[86px] py-3 flex items-center justify-between text-white hover:bg-[#F8EA2B] hover:text-[#004AAD] text-xs tracking-wider transition-colors'>
 										<div className='flex items-center space-x-[15px]'>
 											<img
@@ -491,6 +493,8 @@ function Nav() {
 							].map((item, i) => (
 								<Link
 									key={i}
+									target='_blank'
+									rel='noopener noreferrer'
 									to={item.link}
 									className='p-[50px] border-b-[0.5px] w-full border-opacity-20 border-white  flex items-center justify-between text-white hover:bg-[#F8EA2B] hover:text-[#004AAD] text-xs tracking-wider transition-colors'>
 									<div className='flex items-center space-x-[34px]'>
