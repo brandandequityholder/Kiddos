@@ -2,13 +2,8 @@ import React from 'react';
 
 import rightBlob from './rightBlob.svg';
 import videoMask from './videoSvg.svg';
-import TopVid from '../../assets/TopVid.mp4';
 import VidCurveMob from './VidCurveMob.svg';
-import preview from './preview.png';
-import secCurve from './secCurve.svg';
-import lastCurve from './LastCurve.svg';
-import leftAsset from './leftAsset.svg';
-import rightAsset from './rightAsset.svg';
+
 import {
 	curveFiveTop,
 	curveFourBottom,
