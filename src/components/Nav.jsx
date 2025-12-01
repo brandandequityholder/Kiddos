@@ -269,9 +269,13 @@ function Nav() {
 
 					{/* BUTTONS */}
 					<div className='flex space-x-[24px]'>
-						<button className='w-[101.95px] proxima text-[#004aad] flex items-center justify-center text-xs font-bold font-["Proxima_Nova"] leading-[37.18px] tracking-[2.093px] h-8 bg-[#f8ea2b] rounded-lg'>
+						<Link
+							target='_blank'
+							rel='noopener noreferrer'
+							to='https://Kiddosatlanta.reg.eleyo.com'
+							className='w-[101.95px] proxima text-[#004aad] flex items-center justify-center text-xs font-bold font-["Proxima_Nova"] leading-[37.18px] tracking-[2.093px] h-8 bg-[#f8ea2b] rounded-lg'>
 							ENROLL
-						</button>
+						</Link>
 						<Link
 							to={'contact'}
 							className='min-w-[140px] proxima text-[#004aad] flex items-center justify-center text-xs font-bold font-["Proxima_Nova"] leading-[37.18px] tracking-[2.093px] h-8 bg-[#f8ea2b] rounded-lg'>
@@ -436,9 +440,13 @@ function Nav() {
 						</Link>
 
 						<div className='flex  relative flex-col w-full p-[46px] space-y-[26px]'>
-							<div className='w-full flex font-["League_Spartan"] tracking-[3.232px] text-[18.525px] justify-center items-center bg-[#F8EA2B] text-[#004AAD] font-bold h-[49.4px] rounded-[6px]'>
+							<Link
+								target='_blank'
+								rel='noopener noreferrer'
+								to='https://Kiddosatlanta.reg.eleyo.com'
+								className='w-full flex font-["League_Spartan"] tracking-[3.232px] text-[18.525px] justify-center items-center bg-[#F8EA2B] text-[#004AAD] font-bold h-[49.4px] rounded-[6px]'>
 								ENROLL
-							</div>
+							</Link>
 							<div className='w-full flex font-["League_Spartan"]  tracking-[3.232px] text-[18.525px] justify-center items-center bg-[#F8EA2B] text-[#004AAD] font-bold h-[49.4px] rounded-[6px]'>
 								<Link
 									to={'contact'}

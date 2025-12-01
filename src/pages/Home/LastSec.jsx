@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 function LastSec() {
 	return (
 		<section className='bg-[#fdf9ef] pt-[30px] lg:pt-0 pb-[120px] lg:pb-[260px] min-h-[591px]  w-full overflow-hidden relative  h-fit lg:min-h-[500px]'>
@@ -25,9 +26,13 @@ function LastSec() {
 						home each summer! See you soon!
 					</p>
 				</div>
-				<button className='w-[189.598px] lg:w-[261.29px] flex justify-center items-center text-[#fff] text-[14.149px] lg:text-xl font-[600] font-["Montserrat"] leading-[69.29px] tracking-[3.90px] h-[43.688px] lg:h-[60.207px] bg-[#004AAD] rounded-[4.36px] lg:rounded-[6px]'>
+				<Link
+					target='_blank'
+					rel='noopener noreferrer'
+					to='https://Kiddosatlanta.reg.eleyo.com'
+					className='w-[189.598px] lg:w-[261.29px] flex justify-center items-center text-[#fff] text-[14.149px] lg:text-xl font-[600] font-["Montserrat"] leading-[69.29px] tracking-[3.90px] h-[43.688px] lg:h-[60.207px] bg-[#004AAD] rounded-[4.36px] lg:rounded-[6px]'>
 					ENROLL NOW{' '}
-				</button>
+				</Link>
 			</div>
 		</section>
 	);
