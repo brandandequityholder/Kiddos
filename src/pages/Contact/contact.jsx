@@ -5,7 +5,7 @@ import map from './map.png';
 import secCurve from './secCurve.svg';
 import AnythingElse from '../../components/AnythingElse';
 import emailjs from 'emailjs-com';
-
+import { Linkf } from 'react-router-dom';
 function Contact() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [status, setStatus] = useState('');
