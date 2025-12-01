@@ -23,6 +23,7 @@ import {
 	curveTwoTop,
 } from './bgCurves';
 import AnythingElse from '../../components/AnythingElse';
+import bg from './bg.jpg';
 function Policies() {
 	const colOne = [
 		{
@@ -308,30 +309,7 @@ function Policies() {
 							className=' z-30  right-0 '
 						/>
 						<div className=' z-40  top-[50px] lg:block hidden absolute right-[-140px] w-fit h-fit'>
-							<video
-								playsInline
-								src={TopVid}
-								loop
-								autoPlay
-								muted
-								preload='none'
-								poster={preview}
-								className='h-[596.36px] w-[892.51px] object-cover '
-								style={{
-									WebkitMaskImage: `url(${videoMask})`,
-									maskImage: `url(${videoMask})`,
-									WebkitMaskSize: 'contain',
-									maskSize: 'contain',
-									WebkitMaskRepeat: 'no-repeat',
-									maskRepeat: 'no-repeat',
-									WebkitMaskPosition: 'center',
-									maskPosition: 'center',
-									WebkitMaskMode: 'alpha',
-									maskMode: 'alpha',
-								}}
-							/>
 							<div
-								className='absolute inset-0 bg-blue-500/15 pointer-events-none'
 								style={{
 									WebkitMaskImage: `url(${videoMask})`,
 									maskImage: `url(${videoMask})`,
@@ -341,20 +319,20 @@ function Policies() {
 									maskRepeat: 'no-repeat',
 									WebkitMaskPosition: 'center',
 									maskPosition: 'center',
-									WebkitMaskMode: 'alpha',
-									maskMode: 'alpha',
 								}}
-							/>
+								className='relative'>
+								<img
+									src={bg}
+									className='h-[596.36px] w-[892.51px] object-cover'
+								/>
+								<div className='w-full absolute top-0 left-0 h-full opacity-20 bg-[#004AAD]'></div>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div className='h-[410px] relative lg:hidden overflow-hidden'>
-					<video
-						playsInline
-						src={TopVid}
-						loop
-						autoPlay
-						muted
+					<img
+						src={bg}
 						className=' w-full h-full  object-cover '
 					/>
 					<img
