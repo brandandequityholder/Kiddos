@@ -4,7 +4,6 @@ import leftAsset from './leftAsset.svg';
 import rightAsset from './rightAsset.svg';
 import rightBlob from './rightBlob.svg';
 import videoMask from './videoSvg.svg';
-import TopVid from '../../assets/TopVid.mp4';
 import VidCurveMob from './VidCurveMob.svg';
 import preview from './preview.png';
 import bg from './bg.jpg';
