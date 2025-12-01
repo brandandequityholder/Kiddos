@@ -392,9 +392,13 @@ function Contact() {
 								</span>
 							</div>
 
-							<button className='w-full lg:mx-0 mx-auto max-w-[261.41px] flex items-center h-[60.24px] bg-[#004aad] justify-center text-white text-[17px] font-bold font-["Montserrat"] leading-[69.32px] tracking-[3.90px] rounded-[5.91px]'>
+							<Link
+								to='https://maps.app.goo.gl/s4pmEBnkawZHrp4y5'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='w-full lg:mx-0 mx-auto max-w-[261.41px] flex items-center h-[60.24px] bg-[#004aad] justify-center text-white text-[17px] font-bold font-["Montserrat"] leading-[69.32px] tracking-[3.90px] rounded-[5.91px]'>
 								GET DIRECTIONs
-							</button>
+							</Link>
 						</div>
 					</div>
 				</div>
