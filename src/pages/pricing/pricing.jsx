@@ -351,7 +351,9 @@ function Pricing() {
 										</span>
 									</p>
 									<Link
-										to={'schedule'}
+										target='_blank'
+										rel='noopener noreferrer'
+										to='https://Kiddosatlanta.reg.eleyo.com'
 										className='w-[140px] relative z-30 flex items-center justify-center lg:w-[165.87px] h-[38.22px] justify-center text-white text-[11px] lg:text-[13.18px] font-bold font-["Montserrat"] leading-[29.77px] tracking-widest bg-[#75CB31] rounded-[6px]'>
 										ENROLL NOW
 									</Link>
