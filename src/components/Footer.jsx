@@ -77,9 +77,9 @@ function Footer() {
 								<div className='flex space-x-[34px] items-start'>
 									<div className='mt-[5px] w-[15px]'>{email}</div>
 									<a
-										href='mailto:Support@kiddosdaycamp.com'
+										href='mailto:info@kiddosatlanta.com'
 										className="max-w-[464.73px] justify-start text-blue-800 text-sm font-normal font-['League_Spartan'] leading-6 hover:underline">
-										Support@kiddosdaycamp.com
+										info@kiddosatlanta.com
 									</a>
 								</div>
 
@@ -131,7 +131,7 @@ function Footer() {
 					<div className='lg:h-[70px] py-[33px] space-y-[20px] lg:py-0  lg:px-[80px] flex lg:flex-row flex-col justify-end w-full bg-[#004AAD]'>
 						<div className='flex lg:w-fit w-full justify-center items-center'>
 							<p className=' justify-start text-white text-[11.312px]  lg:text-base font-normal MadeGentle uppercase leading-6 tracking-[3.52px]'>
-								@Kiddoscamp
+								@kiddos_camp
 							</p>
 
 							{/* Socials */}
@@ -162,7 +162,7 @@ function Footer() {
 						</div>
 						<div className='lg:hidden w-full flex items-end justify-center '>
 							<div className='max-w-[276px]  flex justify-center items-center  mx-0 text-center w-fit h-8  text-white text-xs font-normal MadeGentle uppercase leading-[17.01px] tracking-[2.60px]'>
-								<p>© 2025 KIDOOS ATLANTA, LLC. </p>
+								<p>© 2025 KIDDOS ATLANTA, LLC. </p>
 							</div>
 						</div>
 					</div>
