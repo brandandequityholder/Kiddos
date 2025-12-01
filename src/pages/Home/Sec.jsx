@@ -75,13 +75,13 @@ function Sec() {
 									<div>
 										<p className="max-w-[197.91px] lg:text-[24px] text-[18px] justify-start text-[#004aad]  font-bold font-['League_Spartan'] lg:leading-[31px] leading-[22px]">
 											Summer 2026, <br />
-											June 9 – July 11,{' '}
+											June 8- July 10
 										</p>
 									</div>
 								</div>
 								<p className="max-w-[284px] lg:max-w-[221px]  justify-start text-[#004aad] text-[15px] lg:text-[20px] font-[500] font-['Montserrat'] leading-[25px] lg:leading-[33px]">
 									We have weekly sessions to allow for flexibility- Join for one
-									or multiple weeks!
+									or multiple weeks! (Closed on June 19 & July 3)
 								</p>
 							</div>
 						</div>

@@ -80,9 +80,9 @@ function Team() {
 						<img
 							src={rightBlob}
 							alt=''
-							className=' z-30  right-0 '
+							className=' z-30  right-[60px] '
 						/>
-						<div className=' z-40  top-0 lg:block hidden absolute right-[-200px] w-fit h-fit'>
+						<div className=' z-40  top-[60px] lg:block hidden absolute right-[-200px] h-[596.36px] w-[892.51px] '>
 							<video
 								playsInline
 								src={TopVid}
