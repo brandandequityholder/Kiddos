@@ -350,10 +350,10 @@ function Pricing() {
 											for camp fun! <br />
 										</span>
 									</p>
-									<Link to={'/contact'}>
-										<button className='w-[140px] lg:w-[165.87px] h-[38.22px] justify-center text-white text-[11px] lg:text-[13.18px] font-bold font-["Montserrat"] leading-[29.77px] tracking-widest bg-[#75CB31] rounded-[6px]'>
-											ENROLL NOW
-										</button>
+									<Link
+										to={'schedule'}
+										className='w-[140px] relative z-30 flex items-center justify-center lg:w-[165.87px] h-[38.22px] justify-center text-white text-[11px] lg:text-[13.18px] font-bold font-["Montserrat"] leading-[29.77px] tracking-widest bg-[#75CB31] rounded-[6px]'>
+										ENROLL NOW
 									</Link>
 								</div>
 								<div className='h-[250px] pt-[100px] lg:pt-0 lg:h-[212.93px]  lg:text-start text-center relative flex flex-col justify-center  lg:pl-[34.42px] w-full'>
@@ -486,9 +486,11 @@ function Pricing() {
 							<div className=' justify-center    text-[#004aad] text-[26px] lg:text-[31.64px] font-normal MadeGentle leading-[28px] leading-[26px] lg:leading-[34.42px]'>
 								Scholarships
 							</div>
-							<button className='w-[276.97px] flex items-center h-[38.42px] bg-[#75CB31] justify-center text-white text-[13.184px] font-[600] font-["Montserrat"] leading-[29.77px] tracking-[1.676px] rounded-md'>
+							<Link
+								to={'/SCHEDULE'}
+								className='w-[276.97px] flex items-center h-[38.42px] bg-[#75CB31] justify-center text-white text-[13.184px] font-[600] font-["Montserrat"] leading-[29.77px] tracking-[1.676px] rounded-md'>
 								APPLY FOR A SCHOLARSHIP
-							</button>
+							</Link>
 						</div>
 						<div className='border-b-[0.80px] items-center flex px-[30.86px] py-[20px]  min-h-[84.851px] w-full border-[#75CB31]'>
 							<div className=" justify-center text-[#004aad] text-[17px] font-medium font-['Montserrat'] leading-[31.219px]">

@@ -54,9 +54,11 @@ function First() {
 								activities to choose from!
 							</p>
 						</div>
-						<button className='w-[189.598px] lg:w-[261.29px] flex justify-center items-center text-[#004AAD] text-[14.149px] lg:text-xl font-[600] font-["Montserrat"] leading-[69.29px] tracking-[3.90px] h-[43.688px] lg:h-[60.207px] bg-[#F8EA2B] rounded-[4.36px] lg:rounded-[6px]'>
+						<Link
+							to={'schedule'}
+							className='w-[189.598px] lg:w-[261.29px] flex justify-center items-center text-[#004AAD] text-[14.149px] lg:text-xl font-[600] font-["Montserrat"] leading-[69.29px] tracking-[3.90px] h-[43.688px] lg:h-[60.207px] bg-[#F8EA2B] rounded-[4.36px] lg:rounded-[6px]'>
 							LEARN MORE
-						</button>
+						</Link>
 					</div>
 				</div>
 			</div>

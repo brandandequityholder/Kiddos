@@ -24,7 +24,7 @@ function Footer() {
 		},
 	];
 	return (
-		<footer className='overflow-x-hidden'>
+		<footer className=''>
 			<LastSec></LastSec>
 			<div className='  lg:mt-[260px] lg:-mb-[70px] lg:h-fit  mt-[131px] relative '>
 				<video
