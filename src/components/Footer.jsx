@@ -89,7 +89,7 @@ function Footer() {
 									<a
 										href='tel:4043435667'
 										className="max-w-[464.73px] justify-start text-blue-800 text-sm font-normal font-['League_Spartan'] leading-6 hover:underline">
-										404.343.5667
+										404.955.3184
 									</a>
 								</div>
 							</div>
