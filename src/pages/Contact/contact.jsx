@@ -82,10 +82,10 @@ function Contact() {
 
 		emailjs
 			.send(
-				'service_gjc2i8e', // your Service ID
-				'template_8z7832q', // your Template ID
+				'service_nuvhrhi', // your Service ID
+				'template_porm1gg', // your Template ID
 				templateParams,
-				'lEBVgecqjefIDBCNn' // your Public Key
+				'fms-Ts9Vk_Al7EVMr' // your Public Key
 			)
 			.then(
 				() => {
