@@ -535,7 +535,9 @@ function Pricing() {
 					</div>
 				</div>
 			</section>
-			<AnythingElse></AnythingElse>
+			<div className='bg-[#F8FBFF]'>
+				<AnythingElse></AnythingElse>
+			</div>
 		</div>
 	);
 }
