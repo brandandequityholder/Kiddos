@@ -9,7 +9,7 @@ function Announcement() {
 					<Link
 						target='_blank'
 						rel='noopener noreferrer'
-						to='https://Kiddosatlanta.reg.eleyo.com'>
+						to='https://kiddosatlanta.reg.eleyo.com/child-care/1/kiddos-summer'>
 						<p className="text-right underline  MadeGentle justify-start text-blue-800 text-[10px] lg:text-lg  font-normal font-['MADE_Gentle'] leading-[50.33px] tracking-wide">
 							CLICK HERE TO ENROLL NOW
 						</p>

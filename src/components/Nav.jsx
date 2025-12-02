@@ -272,7 +272,7 @@ function Nav() {
 						<Link
 							target='_blank'
 							rel='noopener noreferrer'
-							to='https://Kiddosatlanta.reg.eleyo.com'
+							to='https://kiddosatlanta.reg.eleyo.com/child-care/1/kiddos-summer'
 							className='w-[101.95px] proxima text-[#004aad] flex items-center justify-center text-xs font-bold font-["Proxima_Nova"] leading-[37.18px] tracking-[2.093px] h-8 bg-[#f8ea2b] rounded-lg'>
 							ENROLL
 						</Link>
@@ -443,7 +443,7 @@ function Nav() {
 							<Link
 								target='_blank'
 								rel='noopener noreferrer'
-								to='https://Kiddosatlanta.reg.eleyo.com'
+								to='https://kiddosatlanta.reg.eleyo.com/child-care/1/kiddos-summer'
 								className='w-full flex font-["League_Spartan"] tracking-[3.232px] text-[18.525px] justify-center items-center bg-[#F8EA2B] text-[#004AAD] font-bold h-[49.4px] rounded-[6px]'>
 								ENROLL
 							</Link>
