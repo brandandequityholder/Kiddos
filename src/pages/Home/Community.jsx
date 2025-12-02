@@ -18,7 +18,7 @@ function Community() {
 						className='absolute lg:block hidden left-0-0'
 					/>
 				</div>
-				<div className=' lg:pl-0 pl-[56px] lg:max-w-[1278.65px] relative mx-auto w-full'>
+				<div className=' lg:pl-[40px] pl-[56px] lg:max-w-[1278.65px] relative mx-auto w-full'>
 					<div className='lg:w-[1111.47px] space-y-[10px] justify-center'>
 						<p className="text-[#004aad] text-[16.449px] lg:text-[30.99px] font-medium font-['League_Spartan'] uppercase tracking-[6.898px] leading-[100%] lg:tracking-[12.99px]">
 							TESTIMONIALS
