@@ -19,10 +19,12 @@ import Contact from './pages/Contact/contact';
 import Values from './pages/Values/values';
 import Pricing from './pages/pricing/pricing';
 import Careers from './pages/Careers/Careers';
+import ScrollToTop from './components/scroll';
 function App() {
 	return (
 		<div className='overflow-hidden p-0 m-0'>
 			<BrowserRouter>
+				<ScrollToTop></ScrollToTop>
 				{/* <div className="py-[56px] bg-[#F6C94B] flex space-x-[83px] justify-center border-black ">
         {nav.map((el) => (
           <Link
