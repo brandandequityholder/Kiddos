@@ -105,7 +105,7 @@ function Pricing() {
 	];
 	return (
 		<div>
-			<section className='w-full relative min-h-screen bg-[#F8FBFF]  mt-[78px] pt-[78px]'>
+			<section className='w-full relative  bg-[#F8FBFF]  mt-[78px] pt-[78px]'>
 				<div className=' lg:block hidden'>
 					<img
 						src={leftAsset}
