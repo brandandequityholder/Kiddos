@@ -286,7 +286,7 @@ function Policies() {
 		},
 	];
 	// 1. Array Merging Logic (Put it here!)
-	const mobilePolicies = [];
+	const mobilePolicies = [];           
 	const maxLen = Math.max(colOne.length, colTwo.length);
 
 	for (let i = 0; i < maxLen; i++) {

@@ -46,8 +46,8 @@ function CamperChoice() {
 						</div>
 					</div>
 					<Link
-						to={'shedule'}
-						className='w-[189.598px] lg:w-[261.29px] flex items-center text-center justify-center h-[44px] lg:h-[60.21px] text-[#004aad] text-[14.411px]  lg:text-xl font-[700] font-["Montserrat"] leading-[69.29px] tracking-[3.90px] bg-[#F8EA2B] rounded-[4.354px] lg:rounded-[6px]'>
+						to={'schedule'}
+						className='w-[189.598px] relative z-40 lg:w-[261.29px] flex items-center text-center justify-center h-[44px] lg:h-[60.21px] text-[#004aad] text-[14.411px]  lg:text-xl font-[700] font-["Montserrat"] leading-[69.29px] tracking-[3.90px] bg-[#F8EA2B] rounded-[4.354px] lg:rounded-[6px]'>
 						LEARN MORE
 					</Link>
 				</div>
