@@ -136,9 +136,10 @@ function Footer() {
 								key={index}
 								to={link.url}
 								target='_blank'
+								style={{ backgroundColor: link.bgColor }}
 								rel='noopener noreferrer'
 								// Use the bgColor from Sanity
-								className={`lg:flex-1 h-[53.707px] lg:text-base text-[12.42px] lg:h-full flex items-center justify-center ${link.bgColor}`}>
+								className={`lg:flex-1 h-[53.707px] lg:text-base text-[12.42px] lg:h-full flex items-center justify-center `}>
 								{link.name}
 							</Link>
 						))}
