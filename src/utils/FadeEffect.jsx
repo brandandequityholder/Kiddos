@@ -1,41 +1,45 @@
-import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react';
+
 const handleScroll = () => {
-  const elements = document.querySelectorAll('p  , button')
-  elements.forEach((element) => {
-    const elementTop = element.getBoundingClientRect().top
-    const elementBottom = element.getBoundingClientRect().bottom
-    const windowHeight = window.innerHeight
+	const elements = document.querySelectorAll('p, button, header'); // include header if needed
+	const windowHeight = window.innerHeight;
 
-    // Add 'fadeIn' class when element is inside the view
-    if (elementTop < windowHeight && elementBottom >= 0) {
-      element.classList.add('fadeIn')
-      element.classList.remove('fadeOut')
-    } else {
-      // Add 'fadeOut' class when element goes out of view
-      element.classList.add('fadeOut')
-      element.classList.remove('fadeIn')
-    }
-  })
-}
+	elements.forEach((element) => {
+		const rect = element.getBoundingClientRect();
+		const elementTop = rect.top;
+		const elementBottom = rect.bottom;
+
+		if (elementTop < windowHeight && elementBottom >= 0) {
+			element.classList.add('fadeIn');
+			element.classList.remove('fadeOut');
+		} else {
+			element.classList.add('fadeOut');
+			element.classList.remove('fadeIn');
+		}
+	});
+};
+
 function FadeEffect() {
-  const navigate = useNavigate(null)
-  useEffect(() => {
-    handleScroll()
-    // Attach the event listener for scroll
-    window.addEventListener('scroll', handleScroll)
+	useEffect(() => {
+		// Run once after a short delay
+		const timeout = setTimeout(() => handleScroll(), 50);
 
-    window.addEventListener('resize', handleScroll)
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-      window.addEventListener('resize', handleScroll)
-    }
-  }, [])
-  useEffect(() => {
-    handleScroll()
-  }, [navigate])
-  return null
+		// Also run repeatedly for new elements (for API-fetched content)
+		const interval = setInterval(handleScroll, 200); // every 200ms
+
+		// Add scroll & resize listeners
+		window.addEventListener('scroll', handleScroll);
+		window.addEventListener('resize', handleScroll);
+
+		return () => {
+			clearTimeout(timeout);
+			clearInterval(interval);
+			window.removeEventListener('scroll', handleScroll);
+			window.removeEventListener('resize', handleScroll);
+		};
+	}, []);
+
+	return null;
 }
 
-export { FadeEffect, handleScroll }
+export { FadeEffect, handleScroll };
