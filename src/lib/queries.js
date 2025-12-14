@@ -9,3 +9,24 @@ export const getAnnouncement = () =>
       enabled
     }
   `);
+export const getFooterData = () =>
+	sanity.fetch(`
+    *[_type == "footer"][0]{
+      title,
+      description,
+      address,
+      addressLink,
+      email,
+      phone,
+      socialsText,
+      socialLinks[] {
+          platform,
+          url
+      },
+      externalLinks[] {
+          name,
+          url,
+          bgColor
+      }
+    }
+  `);
