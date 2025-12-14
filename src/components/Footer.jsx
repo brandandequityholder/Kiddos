@@ -34,14 +34,14 @@ function Footer() {
 		return <footer className='h-[500px] w-full bg-white'></footer>;
 	}
 
-	// De-structure the Sanity data for cleaner use
 	const {
 		title,
 		description,
 		address,
 		addressLink,
-		email: contactEmail, // Renaming to avoid conflict with imported icon
-		phone: contactPhone, // Renaming to avoid conflict with imported icon
+		email: contactEmail,
+		phone: contactPhone,
+		copyrightText, // <-- DESTRUCTURE NEW FIELD
 		socialsText,
 		socialLinks,
 		externalLinks,
@@ -183,7 +183,7 @@ function Footer() {
 						<div className='lg:hidden w-full flex items-end justify-center '>
 							<div className='max-w-[276px] flex justify-center items-center mx-0 text-center w-fit h-8 text-white text-xs font-normal MadeGentle uppercase leading-[17.01px] tracking-[2.60px]'>
 								{/* Note: The year/company name here could also be dynamic if needed, but it's often static. */}
-								<p>© 2025 KIDDOS ATLANTA, LLC. </p>
+								<p>{copyrightText} </p>
 							</div>
 						</div>
 					</div>

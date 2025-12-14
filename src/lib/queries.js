@@ -18,6 +18,7 @@ export const getFooterData = () =>
       addressLink,
       email,
       phone,
+      copyrightText,  // <-- ADDED THIS FIELD
       socialsText,
       socialLinks[] {
           platform,
@@ -28,5 +29,16 @@ export const getFooterData = () =>
           url,
           bgColor
       }
+    }
+  `);
+
+export const getLastSecData = () =>
+	sanity.fetch(`
+    *[_type == "lastSec"][0]{
+      preTitle,
+      boldTitle,
+      description,
+      ctaText,
+      ctaUrl
     }
   `);
