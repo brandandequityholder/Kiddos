@@ -2,7 +2,7 @@ import BgRight from './Assets/BgRight.svg';
 import BgLeft from './Assets/BgLeft.svg';
 import lastCurve from './Curves/LastCurve.svg';
 import ScrollX from './ScrollX';
-function Community() {
+function Community({ headline, tagline, testimonials }) {
 	return (
 		<section className='relative   bg-[#F8EA2B]'>
 			<div className='py-[50px] lg:pt-[200px]'>
@@ -21,18 +21,19 @@ function Community() {
 				<div className=' lg:pl-[40px] pl-[56px] lg:max-w-[1278.65px] relative mx-auto w-full'>
 					<div className='lg:w-[1111.47px] space-y-[10px] justify-center'>
 						<p className="text-[#004aad] text-[16.449px] lg:text-[30.99px] font-medium font-['League_Spartan'] uppercase tracking-[6.898px] leading-[100%] lg:tracking-[12.99px]">
-							TESTIMONIALS
+							{tagline}
 						</p>
 						<p className="text-[#004aad] text-[64.97px] font-bold font-['League_Spartan'] uppercase"></p>
 						<p className='text-[#004aad] text-[30.776px] leading-[100%] lg:text-[57.97px] font-normal MadeGentle uppercase'>
-							OUR COMMUNITY LOVES KIDDOS !<br />
+							{headline}
+							<br />
 						</p>
 					</div>
 
 					{/* Horizontal scroll section */}
 				</div>
 			</div>
-			<ScrollX></ScrollX>
+			<ScrollX testimonials={testimonials}></ScrollX>
 			<img
 				src={lastCurve}
 				alt=''

@@ -1,12 +1,14 @@
 import firstCurve from './firstCurve.svg';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import lastCurve from './LastCurve.svg';
 import map from './map.png';
 import secCurve from './secCurve.svg';
 import AnythingElse from '../../components/AnythingElse';
 import emailjs from 'emailjs-com';
 import { Link } from 'react-router-dom';
+import { getContactPageData } from '../../lib/queries';
 function Contact() {
+	const [contactData, setContactData] = useState(null);
 	const [isOpen, setIsOpen] = useState(false);
 	const [status, setStatus] = useState('');
 	const [selectedOption, setSelectedOption] = useState(
@@ -109,6 +111,20 @@ function Contact() {
 			handleSubmit(e);
 		}
 	};
+	// --- Fetch data from Sanity ---
+	useEffect(() => {
+		async function fetchData() {
+			const data = await getContactPageData();
+			setContactData(data);
+		}
+		fetchData();
+	}, []);
+	useEffect(() => {
+		console.log(contactData);
+	}, [contactData]);
+	if (!contactData) return null; // or loading spinner
+
+	const { heroSection, locationSection } = contactData;
 
 	return (
 		<div>
@@ -145,10 +161,7 @@ function Contact() {
 							<span className='text-[#86d24a]'>Let’s Connect!</span>
 						</p>
 						<p className="max-w-[958px] text-white text-[14px] lg:text-xl font-medium font-['Montserrat'] leading-[33.1px] lg:leading-[33.10px]">
-							Kiddos has been recognized as one of Buckhead’s best summer camps
-							– and we can’t wait to show your family why. If you’re looking for
-							a summer camp in Atlanta that combines high-energy activities,
-							learning experiences, and a caring atmosphere, you’ve found it!
+							{heroSection.description}
 						</p>
 					</div>
 
@@ -334,12 +347,10 @@ function Contact() {
 				<div className='max-w-[1243.406px] space-y-[31px] lg:space-y-[98px] w-full relative lg:px-0 px-[66px] pb-[50px]  lg:pb-[200px] pt-[60px] lg:pt-[190px] lg:pl-[120px] mx-auto'>
 					<div className='space-y-[27px] lg:space-y-[35px]'>
 						<div className=" w-full max-w-[1019px] justify-center text-[#004aad] text-[42px] lg:text-[64px] font-bold font-['League_Spartan'] leading-[44.5px] lg:leading-[67px]">
-							Our Location for Summer ‘26
+							{locationSection.headline}
 						</div>
 						<div className="w-full max-w-[334px] lg:max-w-[977px] justify-center text-[#004aad] text-[14px] lg:text-[38px] font-normal font-['League_Spartan'] leading-[33.1px] lg:leading-[50px]">
-							Please note, while we stay around the same area our location is
-							subject to change yearly in effort to provide an improved Kiddos
-							experience with every passing year.
+							{locationSection.description}
 						</div>
 					</div>
 					<div className='flex lg:flex-row flex-col  space-y-[29px] lg:space-y-0  h-fit lg:h-[437px] lg:space-x-[49px]'>
@@ -380,7 +391,7 @@ function Contact() {
 								Atlanta Classical Academy
 								<br />
 								<br />
-								3260 Northside Dr NW, Atlanta, GA 30305
+								{locationSection.address}
 							</div>
 							<div className='w-full max-w-[303px] lg:hidden  justify-center'>
 								<span className="text-[#004aad] text-[21px] font-bold font-['Montserrat'] leading-7">
@@ -388,12 +399,12 @@ function Contact() {
 									<br />
 								</span>
 								<span className="text-[#004aad] text-[21px] font-medium font-['Montserrat'] leading-7">
-									3260 Northside Dr NW, Atlanta, GA 30305
+									{locationSection.address}
 								</span>
 							</div>
 
 							<Link
-								to='https://maps.app.goo.gl/s4pmEBnkawZHrp4y5'
+								to={locationSection.mapLink}
 								target='_blank'
 								rel='noopener noreferrer'
 								className='w-full lg:mx-0 mx-auto max-w-[261.41px] flex items-center h-[60.24px] bg-[#004aad] justify-center text-white text-[17px] font-bold font-["Montserrat"] leading-[69.32px] tracking-[3.90px] rounded-[5.91px]'>

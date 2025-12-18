@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Bg from './Assets/ScrollBg.svg';
 
 // 1. CLEAN DATA STRUCTURE (Moved outside component, strings only)
@@ -99,10 +99,12 @@ const DATA = [
 	},
 ];
 
-function ScrollX() {
+function ScrollX({ testimonials }) {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const scrollRef = useRef(null);
-
+	useEffect(() => {
+		console.log(testimonials);
+	}, []);
 	// Drag scrolling refs
 	const isDown = useRef(false);
 	const startX = useRef(0);
@@ -169,7 +171,14 @@ function ScrollX() {
 	// 2. Helper Component for the Name Text to avoid repetition
 	const NameBlock = ({ name, title }) => (
 		<div className="text-[#004aad] text-[15.295px] lg:text-[25.58px] font-bold font-['Montserrat'] uppercase whitespace-nowrap">
-			{name}
+			<div className='lg:w-[350px] h-10 justify-center'>
+				<span class="text-[#004aad] text-[15.295px] lg:text-[25.58px] font-bold font-['Montserrat'] uppercase">
+					{name}
+				</span>
+				<span class="text-[#004aad] text-[11.96px] lg:text-[20px] font-bold font-['Montserrat'] uppercase">
+					{title}
+				</span>
+			</div>
 		</div>
 	);
 
@@ -185,7 +194,7 @@ function ScrollX() {
 					onMouseUp={handleMouseUp}
 					onMouseMove={handleMouseMove}
 					onScroll={handleScroll}>
-					{DATA.map((el, i) => (
+					{testimonials.map((el, i) => (
 						<div
 							key={i}
 							className={`w-fit  mr-[23px] lg:mr-0 overflow-hidden lg:w-[645.35px] flex-col space-y-[28px] ${
@@ -213,11 +222,11 @@ function ScrollX() {
 								</div>
 								<div className='absolute   top-0 px-[40px] py-[35px] lg:pt-[70px] lg:px-[60px]  text-start'>
 									<div
-										className={`lg:block max-w-[503px]  hidden text-[#004aad] text-[27.05px] font-normal moreSugar leading-[42.20px] ${el.cmntStyle}`}>
-										{el.cmnt}
+										className={`lg:block  hidden text-[#004aad] text-[27.05px] font-normal moreSugar leading-[42.20px] max-w-[515px] min-w-[204px]`}>
+										{el.reviewText}
 									</div>
 									<div className='lg:hidden  max-w-[300.793px] w-full block text-[#004aad] text-[16.176px] font-normal moreSugar leading-[25.24px]'>
-										{el.cmnt}
+										{el.reviewText}
 									</div>
 								</div>
 							</div>
@@ -240,8 +249,8 @@ function ScrollX() {
 									{/* Text Overlay */}
 									<div className='absolute inset-0  pt-[5px] flex items-center justify-center z-10 pl-8'>
 										<NameBlock
-											name={el.name}
-											title={el.title}
+											name={el.reviewerName}
+											title={el.reviewerItentity}
 										/>
 									</div>
 								</div>
@@ -263,8 +272,8 @@ function ScrollX() {
 									{/* Text Overlay for Mobile */}
 									<div className='absolute pt-[5px] inset-0 h-fit  left-[34px] flex items-center  z-10  '>
 										<NameBlock
-											name={el.name}
-											title={el.title}
+											name={el.reviewerName}
+											title={el.reviewerItentity}
 										/>
 									</div>
 								</div>
@@ -276,7 +285,7 @@ function ScrollX() {
 
 			{/* --- Pagination Bullets --- */}
 			<div className='flex space-x-3 mt-6 pb-6'>
-				{DATA.map((_, index) => (
+				{testimonials.map((_, index) => (
 					<div
 						key={index}
 						onClick={() => scrollToItem(index)}

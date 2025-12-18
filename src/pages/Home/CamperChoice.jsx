@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom';
 import bg from './Assets/bgCamper.svg';
 import CamperCurveOne from './Curves/CampCurveOne.svg';
 import CamperCurveTwo from './Curves/CampCurveTwo.svg';
+import renderPreTitle from '../../utils/renderPreTitle';
 
-function CamperChoice() {
+function CamperChoice({ headline, description, ctaText, ctaLink, tagline }) {
 	return (
 		<section className='  relative bg-[#004AAD]  w-full'>
 			<img
@@ -24,31 +25,22 @@ function CamperChoice() {
 					<div className='space-y-[20px] lg:space-y-[50px]'>
 						<p className=' MadeGentle '>
 							<span class="text-white text-[16.223px]  lg:text-[30.99px] font-medium font-['League_Spartan'] uppercase tracking-[6.803px] lg:tracking-[12.99px]">
-								CAMPERS CHOICE
+								{tagline}
 							</span>
 							<br />
 							<span class="text-white lg:visible  hidden text-[64.97px] font-bold font-['League_Spartan'] uppercase"></span>
 							<span class='text-white  text-[28.352px] lg:text-[57.97px] font-normal MadeGentle uppercase'>
-								THEIR DAY,{' '}
-							</span>
-							<span class='text-[#F8EA2B] text-[28.352px] lg:text-[57.97px] font-normal MadeGentle uppercase'>
-								THEIR WAY
-							</span>
-							<span class='text-white text-[28.352px] lg:text-[57.97px] font-normal MadeGentle uppercase'>
-								.
+								{renderPreTitle(headline)}
 							</span>
 						</p>
 						<div className="w-full max-w-[952px]  min-h-[64.97px] justify-start text-white text-[17px] lg:text-[25px] font-medium font-['Montserrat'] leading-[27.689px] lg:leading-[33.084px]">
-							With Campers Choice, every camper designs their own day. <br />
-							Kids explore passions, try something new, and take ownership of
-							their fun through art, athletics, science, dance, and more — all
-							within a safe, supportive, and wildly creative environment.
+							{renderPreTitle(description)}
 						</div>
 					</div>
 					<Link
-						to={'schedule'}
+						to={ctaLink}
 						className='w-[189.598px] relative z-40 lg:w-[261.29px] flex items-center text-center justify-center h-[44px] lg:h-[60.21px] text-[#004aad] text-[14.411px]  lg:text-xl font-[700] font-["Montserrat"] leading-[69.29px] tracking-[3.90px] bg-[#F8EA2B] rounded-[4.354px] lg:rounded-[6px]'>
-						LEARN MORE
+						{ctaText}
 					</Link>
 				</div>
 			</div>

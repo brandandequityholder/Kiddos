@@ -2,7 +2,38 @@ import KidVid from '../../assets/KidVid.mp4';
 import CurveThree from '../Home/Curves/CurveThree.svg';
 import CurveTwo from '../Home/Curves/CurveTwo.svg';
 import { Link } from 'react-router-dom';
-function DayInLife() {
+function DayInLife({ mainHeadline, steps, ctaText, ctaLink }) {
+	// Helper function to dynamically render the title with color splitting
+	const renderTitle = () => {
+		if (!mainHeadline) return null;
+
+		// Split the title where the color change occurs ("A Day in the Life of a Kiddos Camper")
+		// NOTE: This assumes the dynamic title will always contain the phrase "of a"
+		const parts = mainHeadline.split('<br>');
+		if (parts.length < 2) {
+			// If splitting fails, just render the whole title in the default color
+			return (
+				<span className='text-white text-[45px] lg:text-[57.97px] lg:leading-normal leading-[46px] font-normal MadeGentle'>
+					{mainHeadline}
+				</span>
+			);
+		}
+
+		const [partOne, partTwo] = parts;
+
+		return (
+			<>
+				<span className='text-white text-[45px] lg:text-[57.97px] lg:leading-normal leading-[46px] font-normal MadeGentle'>
+					{partOne}
+				</span>
+				<br className='lg:hidden' />
+				<span className='text-[#74ca31] text-[45px] lg:text-[57.97px] lg:leading-normal leading-[46px] font-normal MadeGentle'>
+					{partTwo}
+				</span>
+			</>
+		);
+	};
+
 	return (
 		<section className='relative z-[5] pb-[30px] lg:pb-[200px]  '>
 			<img
@@ -28,102 +59,52 @@ function DayInLife() {
 			{/* Content (section height determined by this) */}
 			<div className='relative space-y-[30px] lg:space-y-[50px] max-w-[306px] ml-[40px] w-full lg:px-[90px]  lg:max-w-[1291.28px]    lg:mx-auto py-[100px] lg:py-[100px] '>
 				<div className='max-w-[749px]  justify-center'>
-					<span class='text-white text-[45px] lg:text-[57.97px] lg:leading-normal leading-[46px] font-normal MadeGentle'>
+					{/* <span class='text-white text-[45px] lg:text-[57.97px] lg:leading-normal leading-[46px] font-normal MadeGentle'>
 						A Day in the <br className='lg:hidden' /> Life of a{' '}
 					</span>
 					<br className='lg:hidden' />
 					<span class='text-[#74ca31] text-[45px] lg:text-[57.97px] lg:leading-normal leading-[46px] font-normal MadeGentle'>
 						Kiddos Camper
-					</span>
+					</span> */}
+					{renderTitle()}
 				</div>
 
 				<div className='flex flex-col space-y-6'>
 					<div className='lg:block hidden'>
 						<div className='max-w-[1024px]  justify-center'>
-							<span class="text-[#9ae85d] text-[21px] font-bold font-['Montserrat'] leading-9">
-								1.{' '}
-							</span>
-							<span class="text-white text-[21px] font-medium font-['Montserrat'] leading-9">
-								The morning is a time to catch up with friends and play outside.{' '}
-								<br />
-							</span>
-							<span class="text-[#9ae85d] text-[21px] font-bold font-['Montserrat'] leading-9">
-								2.{' '}
-							</span>
-							<span class="text-white text-[21px] font-medium font-['Montserrat'] leading-9">
-								Then the camp day is split up into 6 activity periods. <br />
-							</span>
-							<span class="text-[#9ae85d] text-[21px] font-bold font-['Montserrat'] leading-9">
-								3.{' '}
-							</span>
-							<span class="text-white text-[21px] font-medium font-['Montserrat'] leading-9">
-								Campers gather around our chart before each period and are given
-								6 choices of activities. <br />
-							</span>
-							<span class="text-[#9ae85d] text-[21px] font-bold font-['Montserrat'] leading-9">
-								4.{' '}
-							</span>
-							<span class="text-white text-[21px] font-medium font-['Montserrat'] leading-9">
-								Every period we like to offer 2 sports, a visual art and/or
-								performing art, science or nature, and then something else fun
-								ranging from cooking, Gardening, Wood Working Etc. <br />
-							</span>
-							<span class="text-[#9ae85d] text-[21px] font-bold font-['Montserrat'] leading-9">
-								5.{' '}
-							</span>
-							<span class="text-white text-[21px] font-medium font-['Montserrat'] leading-9">
-								We also have backyard style water play as option each day and
-								Fridays a big water slide!{' '}
-							</span>
+							{steps.map((el, i) => (
+								<>
+									<span class="text-[#9ae85d] text-[21px] font-bold font-['Montserrat'] leading-9">
+										{i + 1}.{' '}
+									</span>
+									<span class="text-white text-[21px] font-medium font-['Montserrat'] leading-9">
+										{el.stepText}
+										<br />
+									</span>
+								</>
+							))}
 						</div>
 					</div>
 					<div className='lg:hidden'>
 						<div className='max-w-[307px] justify-center'>
-							<span class="text-[#9ae85d] text-[17px] font-[600] font-['Montserrat'] leading-6">
-								1.{' '}
-							</span>
-							<span class="text-white text-[17px] font-[600] font-['Montserrat'] leading-6">
-								The morning is a time to catch up with friends and play outside.
-								<br /> <br />
-							</span>
-							<span class="text-[#9ae85d] text-[17px] font-[600] font-['Montserrat'] leading-6">
-								2.
-							</span>
-							<span class="text-white text-[17px] font-[600] font-['Montserrat'] leading-6">
-								{' '}
-								Then the camp day is split up into 6 activity periods. <br />{' '}
-								<br />
-							</span>
-							<span class="text-[#9ae85d] text-[17px] font-[600] font-['Montserrat'] leading-6">
-								3.{' '}
-							</span>
-							<span class="text-white text-[17px] font-[600] font-['Montserrat'] leading-6">
-								Campers gather around our chart before each period and are given
-								6 choices of activities. <br /> <br />
-							</span>
-							<span class="text-[#9ae85d] text-[17px] font-[600] font-['Montserrat'] leading-6">
-								4.
-							</span>
-							<span class="text-white text-[17px] font-[600] font-['Montserrat'] leading-6">
-								{' '}
-								Every period we like to offer 2 sports, a visual art and/or
-								performing art, science or nature, and then something else fun
-								ranging from cooking, Gardening, Wood Working Etc. <br /> <br />
-							</span>
-							<span class="text-[#9ae85d] text-[17px] font-[600] font-['Montserrat'] leading-6">
-								5.{' '}
-							</span>
-							<span class="text-white text-[17px] font-[600] font-['Montserrat'] leading-6">
-								We also have backyard style water play as option each day and
-								Fridays a big water slide! <br /> <br />
-							</span>
+							{steps.map((el, i) => (
+								<>
+									<span class="text-[#9ae85d] text-[17px] font-[600] font-['Montserrat'] leading-6">
+										{i + 1}.{' '}
+									</span>
+									<span class="text-white text-[17px] font-[600] font-['Montserrat'] leading-6">
+										{el.stepText}
+										<br /> <br />
+									</span>
+								</>
+							))}
 						</div>
 					</div>
 				</div>
 				<Link
-					to='schedule'
-					className='w-[189.598px] lg:w-[261.29px] flex justify-center items-center text-white text-[14.149px] lg:text-xl font-[600] font-["Montserrat"] leading-[69.29px] tracking-[3.90px] h-[43.688px] lg:h-[60.207px] bg-[#004aad] rounded-[4.36px] lg:rounded-[6px]'>
-					LEARN MORE
+					to={ctaLink}
+					className='w-[189.598px] lg:w-[261.29px] relative z-50 flex justify-center items-center text-white text-[14.149px] lg:text-xl font-[600] font-["Montserrat"] leading-[69.29px] tracking-[3.90px] h-[43.688px] lg:h-[60.207px] bg-[#004aad] rounded-[4.36px] lg:rounded-[6px]'>
+					{ctaText}
 				</Link>
 			</div>
 			<img
