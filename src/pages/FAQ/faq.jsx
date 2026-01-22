@@ -1,11 +1,18 @@
 import firstCurve from './firstCurve.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react'; // <-- ADD useEffect
 import secCurve from './secCurve.svg';
 import lastCurve from './LastCurve.svg';
 import { Link } from 'react-router-dom';
 import AnythingElse from '../../components/AnythingElse';
-function FAQ() {
-	const faqs = [
+// Assuming you have your Sanity client and get function here (adjust path as needed)
+
+import { getFAQPageData } from '../../lib/queries';
+const initialData = {
+	heroSection: {
+		mainHeadline: 'Loading FAQs...',
+		description: 'Please wait while the frequently asked questions load.',
+	},
+	faqs: [
 		{
 			qst: <>Q: What ages does Kiddos Day Camp serve?</>,
 			ans: (
@@ -180,13 +187,50 @@ function FAQ() {
 				</>
 			),
 		},
-	];
-
+	],
+};
+function FAQ() {
+	// State to hold the fetched content
+	const [pageContent, setPageContent] = useState(initialData);
+	// State to handle the collapsible FAQ index
 	const [openIndex, setOpenIndex] = useState(null);
+	// State to manage loading or error states (optional but recommended)
+	const [isLoading, setIsLoading] = useState(true);
+	// Fetch data from Sanity on component mount
+	useEffect(() => {
+		async function fetchData() {
+			try {
+				const data = await getFAQPageData();
+				if (data) {
+					console.log("fetching faq's");
+					console.log(data);
+					setPageContent(data);
+				}
+			} catch (error) {
+				console.error('Failed to load FAQ data:', error);
+				// Optionally set an error state or keep showing 'Loading...'
+			} finally {
+				setIsLoading(false);
+			}
+		}
+		fetchData();
+	}, []); // Empty dependency array ensures it runs once on mount
 
 	const toggleFAQ = (index) => {
 		setOpenIndex(openIndex === index ? null : index);
 	};
+	if (isLoading) {
+		return (
+			<div className='w-full text-center py-20 bg-[#F8FBFF]'>
+				<p className='text-[#0B3D80] text-4xl font-bold'>Loading Content...</p>
+			</div>
+		);
+	}
+	// Use fetched data instead of the hardcoded array
+	const faqs = pageContent.faqs;
+	const { mainHeadline, description } = pageContent.heroSection;
+
+	// You can show a loading indicator here if you want
 
 	return (
 		<div>
@@ -194,7 +238,7 @@ function FAQ() {
 				<div className='max-w-[1243.406px]   w-full relative lg:px-0 px-[66px] pb-[50px] pt-[60px]  lg:pt-[120px] lg:pl-[73px] mx-auto'>
 					<div className='space-y-[40px]'>
 						<p className="max-w-[1019px] justify-center text-white text-[50px]  lg:text-[75px] font-bold font-['League_Spartan'] leading-[44.5px] lg:leading-[67px]">
-							Frequently Asked Questions...
+							{mainHeadline || 'Frequently Asked Questions...'}
 						</p>
 						<p className="max-w-[958px] justify-start text-white text-[15px] lg:text-[25px] font-medium font-['Montserrat'] leading-[22.135px] lg:leading-[41px]">
 							Kiddos takes the guesswork out of summer.{' '}
@@ -227,7 +271,7 @@ function FAQ() {
 								onClick={() => toggleFAQ(i)}
 								className='flex space-x-[40px] lg:space-x-[100px] w-full text-left focus:outline-none'>
 								<p className="justify-center text-[#004aad] text-[20px] lg:text-[40px] font-bold font-['Montserrat'] leading-[27px] lg:leading-[67px]">
-									{el.qst}
+									{el.question}
 								</p>
 								<div
 									className={`w-[29px] lg:block hidden h-[25px] mt-[15px] transform transition-transform duration-300 ${
@@ -270,7 +314,7 @@ function FAQ() {
 										: 'max-h-0 opacity-0'
 								}`}>
 								<p className="max-w-[977px] w-full justify-center text-[#004aad] text-[14px]  lg:text-[38px] font-normal font-['Montserrat'] leading-[24.1px] lg:leading-[44px]">
-									{el.ans}
+									{el.answer}
 								</p>
 							</div>
 						</div>

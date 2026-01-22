@@ -5,12 +5,13 @@ import lastCurve from './Assets/LastCurve.svg';
 import fifthCurve from './Assets/fifthCurve.svg';
 import clockVid from './Assets/1110.mp4';
 import lineClockMob from './Assets/lineClockMob.svg';
-function DailyProg() {
+import renderPreTitle from '../../utils/renderPreTitle';
+function DailyProg({ schedule, headline }) {
 	const prog = [
 		{
 			time: '7:45am - 9:00am',
-			title: 'Before Camp:',
-			text: (
+			label: 'Before Camp:',
+			description: (
 				<>
 					Campers arrive in the carpool or drop-off line by 9:00 AM (earlier if
 					in Before Camp). They’re greeted by high-energy counselors ready to
@@ -21,8 +22,8 @@ function DailyProg() {
 		},
 		{
 			time: '9:00am',
-			title: 'Morning Pep Start:',
-			text: (
+			label: 'Morning Pep Start:',
+			description: (
 				<>
 					Campers gather at the chart to kick off the morning! We go over the
 					day, talk about making friends and trying new things and belt out some
@@ -32,8 +33,8 @@ function DailyProg() {
 		},
 		{
 			time: '9:15am - 10:15am',
-			title: 'Specials Hour:',
-			text: (
+			label: 'Specials Hour:',
+			description: (
 				<>
 					Each Monday, campers select a Special for the week – a cool project or
 					skill they’ll work on a bit each morning, Monday through Thursday- On
@@ -46,8 +47,8 @@ function DailyProg() {
 		},
 		{
 			time: '10:15am - 2:30pm',
-			title: 'Activity Periods',
-			text: (
+			label: 'Activity Periods',
+			description: (
 				<>
 					After Specials, the core of our day is a series of five activity
 					periods (about 40 minutes each) extending into the early afternoon.
@@ -66,8 +67,8 @@ function DailyProg() {
 		},
 		{
 			time: '11:45am to 12:45pm',
-			title: 'Lunch & Hydration',
-			text: (
+			label: 'Lunch & Hydration',
+			description: (
 				<>
 					Midday we take a break for lunch around 11:45 AM. Campers bring their
 					own peanut-free lunch from home, and we all picnic together (lemonade
@@ -79,8 +80,8 @@ function DailyProg() {
 		},
 		{
 			time: '12:15pm',
-			title: '“Backyard” Water Play!',
-			text: (
+			label: '“Backyard” Water Play!',
+			description: (
 				<>
 					Camper bathing suits are a daily must! They can dive into
 					backyard-style water fun—think wading pools, slip ‘n slides, squirt
@@ -91,8 +92,8 @@ function DailyProg() {
 		},
 		{
 			time: '2:30pm to 6:00pm',
-			title: 'After Camp',
-			text: (
+			label: 'After Camp',
+			description: (
 				<>
 					While carpool wraps up at 2:30 PM, the fun doesn’t stop! After Camp is
 					a relaxed extension with snacks and free play, allowing campers to
@@ -105,8 +106,8 @@ function DailyProg() {
 		},
 		{
 			time: 'Fridays Only',
-			title: 'Fun Fridays',
-			text: (
+			label: 'Fun Fridays',
+			description: (
 				<>
 					Each Friday afternoon, we amp up the excitement with special all-camp
 					events. One of our staples is the giant water slide – an 18-foot
@@ -121,7 +122,10 @@ function DailyProg() {
 			),
 		},
 	];
-
+	useEffect(() => {
+		console.log(schedule);
+		console.log(headline);
+	}, [schedule, headline]);
 	// REFS
 	const clockRef = useRef(null);
 	const progRefs = useRef([]);
@@ -240,7 +244,7 @@ function DailyProg() {
 				</div>
 
 				<div className='space-y-[40px]  lg:space-y-[50px]'>
-					{prog.map((el, i) => (
+					{(schedule?.length > 0 ? schedule : prog).map((el, i) => (
 						<div
 							key={i}
 							ref={addToRefs}
@@ -256,11 +260,11 @@ function DailyProg() {
 							</div>
 							<div className=' justify-center  max-w-[265px] md:max-w-[475.35px] '>
 								<span className='text-[#004aad] text-[18.287px] lg:text-[26.59px] font-normal MadeGentle leading-[22.287px] lg:leading-[25.68px]'>
-									{el.title}
+									{el.label}
 								</span>
 								<br />
 								<span className="text-[#004aad] w-full text-[14px] lg:text-base font-normal font-['League_Spartan'] leading-[22.287px]  lg:leading-[25.68px]">
-									{el.text}
+									{el.description}
 								</span>
 							</div>
 						</div>

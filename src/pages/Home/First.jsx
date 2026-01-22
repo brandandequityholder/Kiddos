@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import Nav from '../../components/Nav';
 import { useEffect } from 'react';
 import curveOne from './Curves/CurveOne.svg';
-function First() {
+function First({ mainTitle, description, ctaText, ctaLink }) {
 	return (
 		<section className='pt-[78px] z-20 h-[920px] relative'>
 			<div className='relative'>
@@ -42,22 +42,17 @@ function First() {
 					<div className='max-w-[278.94px] lg:max-w-[738px] lg:px-0 mt-[100px] lg:mt-[202px] mx-auto space-y-[30px] lg:space-y-[40px]    flex flex-col justify-center items-start '>
 						<div className='space-y-[20px] lg:space-y-[30px]'>
 							<p className=" text-white  lg:w-full text-[55.749px] lg:text-[77.49px] font-bold font-['League_Spartan'] lg:leading-[66.97px] leading-[48.18px]">
-								Atlanta's Best Camp
-								<br />
-								For Your Kiddos
+								{mainTitle}
 							</p>
 
 							<p className="w-full lg:max-w-[738.65px]  justify-start text-white text-[17.809px]  lg:text-[23.4588px] leading-[22.13px] lg:leading-normal font-[400] font-['Montserrat']">
-								Kiddos Summer Camps transform summer into an experience. Think
-								of camp songs being belted, kids just being kids, silly camp
-								counselor names, no technology in the way, and a smorgasbord of
-								activities to choose from!
+								{description}
 							</p>
 						</div>
 						<Link
-							to={'schedule'}
+							to={ctaLink}
 							className='w-[189.598px] lg:w-[261.29px] flex justify-center items-center text-[#004AAD] text-[14.149px] lg:text-xl font-[600] font-["Montserrat"] leading-[69.29px] tracking-[3.90px] h-[43.688px] lg:h-[60.207px] bg-[#F8EA2B] rounded-[4.36px] lg:rounded-[6px]'>
-							LEARN MORE
+							{ctaText}
 						</Link>
 					</div>
 				</div>
