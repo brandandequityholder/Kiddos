@@ -87,7 +87,7 @@ function Footer() {
 					loop
 					preload='auto'
 					style={{ width: '100%', display: 'block' }}
-					className='bg-[#fdf9ef] w-full lg:h-[725.653px] absolute -top-[240px] lg:-top-[400px] lg:w-full object-center'
+					className='bg-[#fdf9ef] w-full lg:h-[725.653px] absolute -top-[240px] lg:-top-[500px] lg:w-full object-cover'
 				/>
 				<div className='bg-white lg:mb-[70px] w-full relative bottom-0 '>
 					<div className='flex py-[50px] space-y-[22px] lg:space-y-0 px-[50px] w-full lg:flex-row flex-col max-w-[1293.38px] mx-auto justify-between lg:px-[100px] lg:py-[60px]'>
