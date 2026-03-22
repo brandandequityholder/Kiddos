@@ -6,6 +6,8 @@ import { chevDown } from '../../assets/icons';
 import { Link } from 'react-router-dom';
 import Nav from '../../components/Nav';
 import { useEffect } from 'react';
+import bgVidPoster from './bgVidPoster.png';
+
 import curveOne from './Curves/CurveOne.svg';
 function First({ mainTitle, description, ctaText, ctaLink }) {
 	return (
@@ -18,6 +20,7 @@ function First({ mainTitle, description, ctaText, ctaLink }) {
 					webkit-playsinline='true'
 					autoPlay
 					loop
+					poster={bgVidPoster}
 					preload='auto'
 					style={{ width: '100%', display: 'block' }}
 					className='h-[920px] w-full object-cover  '></video>
