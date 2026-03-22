@@ -268,17 +268,17 @@ function Nav() {
 					</div>
 
 					{/* BUTTONS */}
-					<div className='flex space-x-[24px]'>
+					<div className='flex h-8 space-x-[24px]'>
 						<Link
 							target='_blank'
 							rel='noopener noreferrer'
 							to='https://kiddosatlanta.reg.eleyo.com/child-care/1/kiddos-summer'
-							className='w-[101.95px]  text-[#004aad] flex items-center justify-center text-[11.99px] font-bold font-["League_Spartan"] leading-[37.18px] tracking-[2.093px] h-8 bg-[#f8ea2b] rounded-lg'>
+							className='w-[101.95px]  text-[#004aad] flex items-center justify-center text-[11.99px] font-bold font-["League_Spartan"] leading-[37.18px] tracking-[2.093px]  bg-[#f8ea2b] rounded-lg'>
 							ENROLL
 						</Link>
 						<Link
 							to={'contact'}
-							className='min-w-[140px]  text-[#004aad] flex items-center justify-center text-[11.99px] font-bold font-["League_Spartan"] leading-[37.18px] tracking-[2.093px] h-8 bg-[#f8ea2b] rounded-lg'>
+							className='min-w-[140px]  text-[#004aad] flex items-center justify-center text-[11.99px] font-bold font-["League_Spartan"] leading-[37.18px] tracking-[2.093px]  bg-[#f8ea2b] rounded-lg'>
 							CONTACT US
 						</Link>
 					</div>
